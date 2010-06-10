@@ -1,0 +1,9 @@
+Generates a simple html soundboard that will play sounds in a user's browser (via html5 audio tag) and/or in the linux host serving the page using mplayer command line. This also supports uploading new files. mp3 and wav supported. 
+
+Adjust upload_max_filesize variable in php.ini (/etc/php5/apache2/php.ini in standard ubuntu install. 
+
+Make sounds directory world writable (or writable for www-data user). 
+
+Make sounds playable for all users rather than just within gnome. Edit /etc/default/pulseaudio and set PULSEAUDIO_SYSTEM_START=1. 
+Add www-data user to pulse-access group.
+Restart sound server with /etc/init.d/pulseaudio restart.   
