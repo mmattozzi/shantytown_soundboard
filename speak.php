@@ -48,7 +48,6 @@
 						var re = new RegExp(text, "i");
 						for (i = 0; i < titleArray.length; i++) {
 							if ( titleArray[i].search(re) < 0 ) {
-								if (idArray[i] == "Chargemp3") { alert("hiding charge"); }
 								$("#" + idArray[i] ).hide();
 							} else {
 								$("#" + idArray[i] ).show();
@@ -85,6 +84,7 @@
 	</head>
 
 	<body>
+		Filter: <input id="typeahead" type="text"/>
 		<div>
 		<?php
 			$script_directory = dirname(__FILE__);
@@ -119,7 +119,6 @@
 
 		?>
 		</div>
-		Filter: <input id="typeahead" type="text"/>
 		<div style="padding: 12px;" >
 			<input type="checkbox" id="playlocal" checked="true"/>Play Locally 
 			<input type="checkbox" id="playremote"/>Play Remote 
