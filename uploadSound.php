@@ -1,6 +1,6 @@
 <?php
 
-$uploaddir = '/var/www/sounds/';
+$uploaddir = dirname(__FILE__) . '/sounds/';
 $uploadfile = $uploaddir . basename($_FILES['userfile']['name']);
 
 if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
